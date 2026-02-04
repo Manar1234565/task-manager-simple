@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 notification.style.marginTop = '20px';
             }
             
-            // Update task list
+            // Update task list.
             const taskList = document.getElementById('task-list');
             if (taskList) {
                 taskList.innerHTML = taskList.innerHTML.replace(
