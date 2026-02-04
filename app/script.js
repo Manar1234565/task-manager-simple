@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 notification.style.marginTop = '20px';
             }
             
-            // Update task list
+            // Update task list.
             const taskList = document.getElementById('task-list');
             if (taskList) {
                 taskList.innerHTML = taskList.innerHTML.replace(
@@ -26,15 +26,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     '✅ Task 3: Add notification system - COMPLETE'
                 );
             }
-            
-            // Auto-hide notification after 5 seconds
-            setTimeout(function() {
-                if (notification && notification.style.display === 'block') {
-                    notification.style.display = 'none';
-                }
-            }, 5000);
         });
     }
-    
-    console.log("Task Manager loaded");
 });
+// Additional feature: Auto-hide notification after 5 seconds
+setTimeout(function() {
+    if (notification && notification.style.display === 'block') {
+        notification.style.display = 'none';
+    }
+}, 5000);
