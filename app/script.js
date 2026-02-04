@@ -29,3 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+// Additional feature: Auto-hide notification after 5 seconds
+setTimeout(function() {
+    if (notification && notification.style.display === 'block') {
+        notification.style.display = 'none';
+    }
+}, 5000);
