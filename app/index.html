@@ -94,6 +94,41 @@
             background-color: #FFF3E0;
             color: #EF6C00;
         }
+        
+        .actions {
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .complete-btn {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .complete-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        
+        .complete-btn:active {
+            transform: translateY(0);
+        }
+        
+        .notification {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #E8F5E9;
+            border-left: 4px solid #4CAF50;
+            border-radius: 4px;
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -120,6 +155,14 @@
                 <div class="status pending"></div>
                 <div class="task-text">Task 3: Add notifications</div>
                 <div class="label label-pending">PENDING</div>
+            </div>
+            
+            <div class="actions">
+                <button id="completeBtn" class="complete-btn">Complete Task</button>
+            </div>
+            
+            <div id="notification" class="notification">
+                <!-- Messages will appear here -->
             </div>
         </div>
     </div>
