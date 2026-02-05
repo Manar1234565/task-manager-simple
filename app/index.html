@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 500px;
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .task {
+            display: flex;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .task:last-child {
+            border-bottom: none;
+        }
+        
+        .task-text {
+            flex: 1;
+            font-size: 16px;
+        }
+        
+        .status {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        
+        .done { background-color: #4CAF50; }
+        .pending { background-color: #FF9800; }
+        
+        .label {
+            font-size: 11px;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .label-done {
+            background-color: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .label-pending {
+            background-color: #FFF3E0;
+            color: #EF6C00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Task Manager</h1>
+            <p>Complete Your Tasks</p>
+        </div>
+        
+        <div class="content">
+            <div class="task">
+                <div class="status done"></div>
+                <div class="task-text">Task 1: Setup repository</div>
+                <div class="label label-done">DONE</div>
+            </div>
+            
+            <div class="task">
+                <div class="status done"></div>
+                <div class="task-text">Task 2: Create HTML</div>
+                <div class="label label-done">DONE</div>
+            </div>
+            
+            <div class="task">
+                <div class="status pending"></div>
+                <div class="task-text">Task 3: Add notifications</div>
+                <div class="label label-pending">PENDING</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
