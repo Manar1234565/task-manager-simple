@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', function() {
     if (completeBtn) {
         completeBtn.addEventListener('click', function() {
             // Show browser alert
-            alert(\"Task completed! Notification sent.\");
+            alert("Task completed! Notification sent.");
             
             // Also update the notification div
-            notificationDiv.innerHTML = \
+            notificationDiv.innerHTML = `
                 <strong>This page says</strong><br>
                 Task completed! Notification sent.
-                <button onclick=\"this.parentElement.style.display='none'\" 
-                        style=\"margin-top:10px; padding:5px 15px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;\">
+                <button onclick="this.parentElement.style.display='none'" 
+                        style="margin-top:10px; padding:5px 15px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;">
                     OK
                 </button>
-            \;
+            `;
             notificationDiv.style.display = 'block';
             
             // Update task status visually
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     taskText.textContent = 'Task 3: Add notifications [COMPLETED]';
                 }
             }
+            
+            console.log("Notification system initialized");
         });
     }
-    
-    console.log(\"Notification system initialized\");
 });
